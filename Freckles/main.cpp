@@ -16,11 +16,11 @@ using namespace std;
 
 double graph[100][100];
 double arrX[100], arrY[100];
-double parent[100];
+int parent[100];
 int key[100];
 bool mstSet[100];
 
-double minKey(int key[], bool mstSet[], int n)
+int minKey(int key[], bool mstSet[], int n)
 {
     double min = INT_MAX/4, min_index;
     
@@ -87,7 +87,7 @@ int main()
     }
     for (int i = 0; i < freckles; i++)
     {
-        for (int j = i + 1; j < freckles; j++)
+        for (int j = 0; j < freckles; j++)
         {
             double valx = arrX[j] - arrX[i];
             double valy = arrY[j] - arrY[i];
